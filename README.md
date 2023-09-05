@@ -12,7 +12,7 @@
 <br>NODE_MAJOR=20
 <br>echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 <br>sudo apt-get update && sudo apt-get install nodejs -y
-<br>node --version
+<br>node --version<br>
 ``4. Clone your project from Github``
 <br>git clone https://github.com/piyushgargdev-01/short-url-nodejs
 
