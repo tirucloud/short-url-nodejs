@@ -1,11 +1,11 @@
 # Steps to deploy a Node.js app to aws using PM2, NGINX as a reverse proxy and an SSL from LetsEncrypt
-``1. Create Free AWS Account``
+1. Create Free AWS Account
 <br>Create free AWS Account at https://aws.amazon.com/
 
-``2. Create and Lauch an EC2 instance and SSH into machine``
+2. Create and Lauch an EC2 instance and SSH into machine
 <br>I would be creating a t2.micro ubuntu machine for this demo.
 
-``3. Install Node and NPM``
+3. Install Node and NPM
 <br>https://deb.nodesource.com/
 <br>sudo apt update && sudo apt install -y ca-certificates curl gnupg
 <br>curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
@@ -13,13 +13,13 @@
 <br>echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 <br>sudo apt-get update && sudo apt-get install nodejs -y
 <br>node --version<br>
-``4. Clone your project from Github``
+4. Clone your project from Github
 <br>git clone https://github.com/piyushgargdev-01/short-url-nodejs
 
-``5. Install dependencies and test app``
+5. Install dependencies and test app
 <br>sudo npm i pm2 -g
-pm2 start index
-```
+pm2 start index 
+
 # Other pm2 commands
 pm2 show app
 pm2 status
@@ -29,13 +29,13 @@ pm2 logs (Show log stream)
 pm2 flush (Clear logs)
 <br>To make sure app starts when reboot
 pm2 startup ubuntu
-``6. Setup Firewall``
+6. Setup Firewall
 sudo ufw enable
 sudo ufw status
 sudo ufw allow ssh (Port 22)
 sudo ufw allow http (Port 80)
 sudo ufw allow https (Port 443)
-``7. Install NGINX and configure``
+7. Install NGINX and configure
 sudo apt install nginx
 
 sudo nano /etc/nginx/sites-available/default
@@ -73,7 +73,7 @@ certbot renew --dry-run
 
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
 
-```cd short-url-nodejs/
+cd short-url-nodejs/
 
 curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
