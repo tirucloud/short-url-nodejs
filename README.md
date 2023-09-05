@@ -7,28 +7,28 @@
 
 ``3. Install Node and NPM``
 <br>https://deb.nodesource.com/
-sudo apt update && sudo apt install -y ca-certificates curl gnupg
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update && sudo apt-get install nodejs -y
-node --version
+<br>sudo apt update && sudo apt install -y ca-certificates curl gnupg
+<br>curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+<br>NODE_MAJOR=20
+<br>echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+<br>sudo apt-get update && sudo apt-get install nodejs -y
+<br>node --version
 
-``4. Clone your project from Github``
+4. Clone your project from Github
 git clone https://github.com/piyushgargdev-01/short-url-nodejs
 
-``5. Install dependencies and test app``
+5. Install dependencies and test app
 
 sudo npm i pm2 -g
 pm2 start index
 
 # Other pm2 commands
-```pm2 show app
+pm2 show app
 pm2 status
 pm2 restart app
 pm2 stop app
 pm2 logs (Show log stream)
-pm2 flush (Clear logs)```
+pm2 flush (Clear logs)
 # To make sure app starts when reboot
 pm2 startup ubuntu
 6. Setup Firewall
@@ -38,7 +38,7 @@ sudo ufw allow ssh (Port 22)
 sudo ufw allow http (Port 80)
 sudo ufw allow https (Port 443)
 7. Install NGINX and configure
-```sudo apt install nginx
+sudo apt install nginx
 
 sudo nano /etc/nginx/sites-available/default
 Add the following to the location part of the server block
@@ -105,4 +105,4 @@ short-url  136.00 KiB
 test> use short-url
 switched to db short-url
 
-short-url> show collections```
+short-url> show collections
