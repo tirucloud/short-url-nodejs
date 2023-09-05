@@ -1,4 +1,4 @@
-# Steps to deploy a Node.js app to DigitalOcean using PM2, NGINX as a reverse proxy and an SSL from LetsEncrypt
+# Steps to deploy a Node.js app to aws using PM2, NGINX as a reverse proxy and an SSL from LetsEncrypt
 
 ``1. Create Free AWS Account``
 <br>Create free AWS Account at https://aws.amazon.com/
