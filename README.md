@@ -77,14 +77,14 @@ https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-labe
 
 cd short-url-nodejs/
 
-<br>curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
+curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
 
-<br>echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
 
-<br>sudo apt update
+sudo apt update
 
 sudo apt install -y mongodb-org
 
@@ -96,10 +96,10 @@ mongosh
 
 test> show dbs
 
-<br>admin       40.00 KiB
-<br>config      72.00 KiB
-<br>local       72.00 KiB
-<br>short-url  136.00 KiB
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+short-url  136.00 KiB
 
 
 test> use short-url
