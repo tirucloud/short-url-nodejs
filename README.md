@@ -62,7 +62,7 @@ Add the following to the location part of the server block
     server_name yourdomain.com www.yourdomain.com;
 
     location / {
-        proxy_pass http://localhost:8001; #whatever port your app runs on
+        proxy_pass http://localhost:8001; whatever port your app runs on
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -70,11 +70,11 @@ Add the following to the location part of the server block
         proxy_cache_bypass $http_upgrade;
     }
 
-# Check NGINX config
+ Check NGINX config
 
 sudo nginx -t
 
-# Restart NGINX
+ Restart NGINX
 
 sudo nginx -s reload
 
@@ -85,14 +85,14 @@ sudo apt-get update
 sudo apt-get install python3-certbot-nginx
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 
-# Only valid for 90 days, test the renewal process with
+ Only valid for 90 days, test the renewal process with
 
 certbot renew --dry-run
 
 
-# INSTALL MONGODB:
+ INSTALL MONGODB:
 
-https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/std-label-install-mdb-community-ubuntu
 
 cd short-url-nodejs/
 
