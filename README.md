@@ -21,7 +21,7 @@
 pm2 start index 
 
 # Other pm2 commands
-``pm2 show app
+```pm2 show app
 pm2 status
 pm2 restart app
 pm2 stop app
@@ -34,7 +34,7 @@ sudo ufw enable
 sudo ufw status
 sudo ufw allow ssh (Port 22)
 sudo ufw allow http (Port 80)
-sudo ufw allow https (Port 443)``
+sudo ufw allow https (Port 443)
 7. Install NGINX and configure
 sudo apt install nginx
 
