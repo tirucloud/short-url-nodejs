@@ -14,11 +14,10 @@
 <br>sudo apt-get update && sudo apt-get install nodejs -y
 <br>node --version
 ``4. Clone your project from Github``
-git clone https://github.com/piyushgargdev-01/short-url-nodejs
+<br>git clone https://github.com/piyushgargdev-01/short-url-nodejs
 
 ``5. Install dependencies and test app``
-
-sudo npm i pm2 -g
+<br>sudo npm i pm2 -g
 pm2 start index
 
 # Other pm2 commands
