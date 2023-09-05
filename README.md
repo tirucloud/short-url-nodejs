@@ -75,7 +75,7 @@ certbot renew --dry-run
 
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
 
-cd short-url-nodejs/
+```cd short-url-nodejs/
 
 curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
