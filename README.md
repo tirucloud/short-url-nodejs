@@ -19,7 +19,7 @@
 ``5. Install dependencies and test app``
 <br>sudo npm i pm2 -g
 pm2 start index
-
+```
 # Other pm2 commands
 pm2 show app
 pm2 status
