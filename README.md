@@ -28,15 +28,15 @@ pm2 restart app
 pm2 stop app
 pm2 logs (Show log stream)
 pm2 flush (Clear logs)
-# To make sure app starts when reboot
+<br>To make sure app starts when reboot
 pm2 startup ubuntu
-6. Setup Firewall
+``6. Setup Firewall``
 sudo ufw enable
 sudo ufw status
 sudo ufw allow ssh (Port 22)
 sudo ufw allow http (Port 80)
 sudo ufw allow https (Port 443)
-7. Install NGINX and configure
+``7. Install NGINX and configure``
 sudo apt install nginx
 
 sudo nano /etc/nginx/sites-available/default
