@@ -11,11 +11,11 @@
 sudo apt install nodejs
 
 node --version
-4. Clone your project from Github
-git clone https://github.com/piyushgargdev-01/short-url-nodejs
-5. Install dependencies and test app
-sudo npm i pm2 -g
-pm2 start index
+``4. Clone your project from Github``
+<br>git clone https://github.com/piyushgargdev-01/short-url-nodejs
+``5. Install dependencies and test app``
+<br>sudo npm i pm2 -g
+<br>pm2 start index
 
 # Other pm2 commands
 pm2 show app
