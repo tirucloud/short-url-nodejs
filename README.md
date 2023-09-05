@@ -7,10 +7,23 @@
 <br>I would be creating a t2.micro ubuntu machine for this demo.
 
 ``3. Install Node and NPM``
-<br>curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install nodejs
+https://deb.nodesource.com/
+
+<br>sudo apt update && sudo apt install -y ca-certificates curl gnupg
+
+<br>curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+<br>NODE_MAJOR=20
+
+<br>echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+
+<br>sudo apt-get update && sudo apt-get install nodejs -y
+
 
 node --version
+
+
+<br>node --version
 ``4. Clone your project from Github``
 <br>git clone https://github.com/piyushgargdev-01/short-url-nodejs
 ``5. Install dependencies and test app``
@@ -66,21 +79,6 @@ certbot renew --dry-run
 
 # INSTALL NODE.JS:
 
-https://deb.nodesource.com/
-
-
-sudo apt update && sudo apt install -y ca-certificates curl gnupg
-
-<br>curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-
-<br>NODE_MAJOR=20
-
-<br>echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
-<br>sudo apt-get update && sudo apt-get install nodejs -y
-
-
-node --version
 
 # INSTALL MONGODB:
 
