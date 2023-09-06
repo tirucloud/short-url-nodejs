@@ -26,8 +26,9 @@ short-url> show collections<br>
 exit<br>
 sudo apt install nginx -y<br>
 sudo systemctl enable nginx<br>
-sudo vi /etc/nginx/sites-available/default
 
+sudo vi /etc/nginx/sites-available/default
+```
 server_name yourdomain.com www.yourdomain.com;
 
 location / {
@@ -37,7 +38,7 @@ location / {
     proxy_set_header Connection 'upgrade';
     proxy_set_header Host $host;
     proxy_cache_bypass $http_upgrade;
-}
+}```
 
 Check NGINX config
 
