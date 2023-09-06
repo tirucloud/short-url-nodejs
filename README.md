@@ -8,7 +8,7 @@
 8. test> show dbs
 9. test> exit
 10. npm list
-11. Clone your project from Github --> git clone https://github.com/thirunahari/short-url-nodejs.git
+11. Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
 12. go to short-url-nodejs directory
 13. cd short-url-nodejs
 14. npm install
