@@ -18,14 +18,14 @@
 16. pm2 start index
 17. pm2 startup
 18. sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
-copy and execute the output and make auto start of an node.js app even on reboot
-mongosh
-test> show dbs
-test> use short-url
-short-url> show collections
-exit
-sudo apt install nginx -y
-sudo systemctl enable nginx
+copy and execute the output and make auto start of an node.js app even on reboot<br>
+mongosh<br>
+test> show dbs<br>
+test> use short-url<br>
+short-url> show collections<br>
+exit<br>
+sudo apt install nginx -y<br>
+sudo systemctl enable nginx<br>
 sudo vi /etc/nginx/sites-available/default
 
 server_name yourdomain.com www.yourdomain.com;
