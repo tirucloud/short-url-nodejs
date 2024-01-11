@@ -29,7 +29,11 @@ sudo systemctl enable nginx<br>
 
 sudo vi /etc/nginx/sites-available/default
 ```
-server_name yourdomain.com www.yourdomain.com;
+server {
+       listen 80;
+       listen [::]:80;
+
+       server_name 3.110.28.55;
 
 location / {
     proxy_pass http://localhost:8001;
@@ -38,6 +42,8 @@ location / {
     proxy_set_header Connection 'upgrade';
     proxy_set_header Host $host;
     proxy_cache_bypass $http_upgrade;
+}
+
 }
 
 Check NGINX config
