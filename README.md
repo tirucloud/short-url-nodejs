@@ -66,3 +66,50 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 Only valid for 90 days, test the renewal process with
 
 certbot renew --dry-run
+mongosh
+
+test> show dbs
+
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+short-url  136.00 KiB
+
+
+test> use short-url
+switched to db short-url
+
+short-url> show collections
+
+short-url> show collections
+urls
+users
+short-url>
+
+
+db.users.find()
+[
+  {
+	_id: ObjectId('659fe20f73142bd743583f1f'),
+	name: 'abc',
+	email: 'abc@xyz.com',
+	password: '123456',
+	createdAt: ISODate('2024-01-11T12:41:51.429Z'),
+	updatedAt: ISODate('2024-01-11T12:41:51.429Z'),
+	__v: 0
+  }
+]
+
+
+short-url> db.users.find()
+[
+  {
+	_id: ObjectId('659fe20f73142bd743583f1f'),
+	name: 'abc',
+	email: 'abc@xyz.com',
+	password: '123456',
+	createdAt: ISODate('2024-01-11T12:41:51.429Z'),
+	updatedAt: ISODate('2024-01-11T12:41:51.429Z'),
+	__v: 0
+  }
+]
