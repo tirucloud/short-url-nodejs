@@ -19,6 +19,7 @@
 17. pm2 startup
 18. sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
 copy and execute the output and make auto start of an node.js app even on reboot<br>
+pm2 save
 mongosh<br>
 test> show dbs<br>
 test> use short-url<br>
