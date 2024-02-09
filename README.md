@@ -13,7 +13,7 @@
 13. cd short-url-nodejs
 14. npm install
 15. sudo npm i pm2 -g\
-    npm list -g
+    npm list -g\
     pm2 list
 16. pm2 start index.js
 17. pm2 startup
