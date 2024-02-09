@@ -17,10 +17,10 @@
     pm2 list
 16. pm2 start index.js
 17. pm2 startup
-18. sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
-copy and execute the output and make auto start of an node.js app even on reboot<br>
-pm2 save
-mongosh<br>
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
+18. copy and execute the output and make auto start of an node.js app even on reboot<br>
+pm2 save\
+mongosh\
 test> show dbs<br>
 test> use short-url<br>
 short-url> show collections<br>
