@@ -85,22 +85,6 @@ short-url> show collections
 short-url> show collections
 urls
 users
-short-url>
-
-
-db.users.find()
-[
-  {
-	_id: ObjectId('659fe20f73142bd743583f1f'),
-	name: 'abc',
-	email: 'abc@xyz.com',
-	password: '123456',
-	createdAt: ISODate('2024-01-11T12:41:51.429Z'),
-	updatedAt: ISODate('2024-01-11T12:41:51.429Z'),
-	__v: 0
-  }
-]
-
 
 short-url> db.users.find()
 [
@@ -112,5 +96,11 @@ short-url> db.users.find()
 	createdAt: ISODate('2024-01-11T12:41:51.429Z'),
 	updatedAt: ISODate('2024-01-11T12:41:51.429Z'),
 	__v: 0
+  }
+]
+short-url> db.urls.find()
+[
+  {
+	.........
   }
 ]
