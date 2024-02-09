@@ -104,3 +104,19 @@ short-url> db.urls.find()
 	.........
   }
 ]
+
+Signup Page: http://127.0.0.1:8001/signup
+
+http://127.0.0.1:8001/login
+
+mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
+
+Download mongodb compass client tool: https://www.mongodb.com/try/download/compass
+
+Go to Linux terminal, edit mongo conf file to access mongodb from anaywhere
+sudo vi /etc/mongod.conf
+
+Goto network section 
+
+Replace 127.0.0.1 with 0.0.0.0
+
