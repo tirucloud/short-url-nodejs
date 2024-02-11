@@ -18,7 +18,7 @@ test> exit
 ``` bash
 npm list
 ```
-### Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
+##### Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
 ### go to short-url-nodejs directory
 ``` bash
 cd short-url-nodejs
