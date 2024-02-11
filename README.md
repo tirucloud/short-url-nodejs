@@ -18,7 +18,7 @@ test> exit
 ``` bash
 npm list
 ```
-##### Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
+##### Clone the project
 ### go to short-url-nodejs directory
 ``` bash
 cd short-url-nodejs
@@ -26,7 +26,7 @@ npm list -g
 npm install
 npm list -g
 sudo npm i pm2 -g
-pm2 lsit
+pm2 list
 pm2 start index.js
 ```
 ### copy and execute the output and make auto start of an node.js app even on reboot
