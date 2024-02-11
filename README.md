@@ -50,7 +50,6 @@ sudo systemctl enable nginx
 ```
 ### Create config file under /etc/nginx/conf.d/
 sudo vi /etc/nginx/conf.d/site.conf
-```
 ``` bash
 server {
        listen 80;
@@ -72,29 +71,36 @@ location / {
 ``` bash
 sudo nginx -t
 ```
-Restart NGINX
-
+### Restart NGINX
+``` bash
 sudo nginx -s reload
+```
+### Signup Page: http://yourdomain.com:8001/signup
 
-Add SSL with LetsEncrypt
+### Login  Page http://yourdomain.com:8001/login
+
+### Add SSL with LetsEncrypt
+``` bash
 sudo add-apt-repository ppa:certbot/certbot 
-
 sudo apt update 
-
 sudo apt install python3-certbot-nginx 
-
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
-
-Only valid for 90 days, test the renewal process with
-
+```
+### SSL Valid Only for 90 days, renew at regular intervals
+``` bash
 certbot renew --dry-run
-
+```
+### To get information about the current status of the Certbot timer service
+``` bash
 sudo systemctl status certbot.timer
-
-Wriet a cron job to perform auto renewal for every 30 days
-
+```
+### List cron jobs
+crontab -l
+### Wriet a cron job to perform auto renewal for every 30 days
+``` bash
 sudo vi /etc/cron.d/certbot
-
+```
+``` bash
 # /etc/cron.d/certbot: crontab entries for the certbot package
 #
 # Upstream recommends attempting renewal twice a day
@@ -106,11 +112,12 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(3600))' && certbot -q renew
-
-crontab -l
+```
+### Test Cron Job
+``` bash
 crontab -t
-
-
+```
+```
 mongosh
 
 test> show dbs
@@ -149,10 +156,6 @@ short-url> db.urls.find()
   }
 ]
 
-Signup Page: http://yourdomain.com:8001/signup
-
-http://yourdomain.com:8001/login
-
 # mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
 
 # Download mongodb compass client tool: https://www.mongodb.com/try/download/compass
@@ -163,4 +166,4 @@ sudo vi /etc/mongod.conf
 Goto network section 
 
 Replace 127.0.0.1 with 0.0.0.0
-
+```
