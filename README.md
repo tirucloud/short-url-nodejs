@@ -28,7 +28,6 @@ npm list -g
 sudo npm i pm2 -g
 pm2 lsit
 pm2 start index.js
-
 ```
 ### copy and execute the output and make auto start of an node.js app even on reboot
 ``` bash
@@ -36,7 +35,7 @@ pm2 startup
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
 pm2 save
 ```
-### Enter into mongodb by typing below command
+### Enter into mongodb and check dbs and collections
 ``` bash
 mongosh
 test> show dbs
@@ -44,11 +43,15 @@ test> use short-url
 short-url> show collections
 exit
 ```
+### Install Nginx and setup Reverse Proxy
+``` bash
 sudo apt install nginx -y
 sudo systemctl enable nginx
-
+```
+### Create config file under /etc/nginx/conf.d/
 sudo vi /etc/nginx/conf.d/site.conf
 ```
+``` bash
 server {
        listen 80;
        listen [::]:80;
@@ -63,13 +66,12 @@ location / {
     proxy_set_header Host $host;
     proxy_cache_bypass $http_upgrade;
 }
-
 }
-
-Check NGINX config
-
+```
+### Test the nginx configuration
+``` bash
 sudo nginx -t
-
+```
 Restart NGINX
 
 sudo nginx -s reload
