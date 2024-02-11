@@ -30,7 +30,7 @@ pm2 lsit
 pm2 start index.js
 
 ```
-### copy and execute the output and make auto start of an node.js app even on reboot<br>
+### copy and execute the output and make auto start of an node.js app even on reboot
 ``` bash
 pm2 startup
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
@@ -39,13 +39,13 @@ pm2 save
 ### Enter into mongodb by typing below command
 ``` bash
 mongosh
-test> show dbs<br>
-test> use short-url<br>
-short-url> show collections<br>
+test> show dbs
+test> use short-url
+short-url> show collections
 exit
 ```
-sudo apt install nginx -y<br>
-sudo systemctl enable nginx<br>
+sudo apt install nginx -y
+sudo systemctl enable nginx
 
 sudo vi /etc/nginx/conf.d/site.conf
 ```
