@@ -1,7 +1,6 @@
 ## Nodejs App
 #### Install node.js from https://deb.nodesource.com/
 #### check node version --> node -v
-#### check node version --> node -v
 #### check node package manager version --> npm -v
 #### Install mongodb from --> https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 ``` bash
