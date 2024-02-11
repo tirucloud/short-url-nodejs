@@ -1,34 +1,49 @@
 ## Nodejs App
 #### Install node.js from https://deb.nodesource.com/
-``` bash 
+#### check node version --> node -v
+#### check node version --> node -v
+#### check node package manager version --> npm -v
+#### Install mongodb from --> https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+``` bash
 sudo systemctl start mongod
+sudo systemctl enable mongod
 ```
-2. check node version --> node -v
-3. check node package manager version --> npm -v
-4. Install mongodb from --> https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
-5. sudo systemctl start mongod
-6. sudo systemctl enable mongod
-7. mongosh
-8. test> show dbs
-9. test> exit
-10. npm list
-11. Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
-12. go to short-url-nodejs directory
-13. cd short-url-nodejs
-14. npm install
-15. sudo npm i pm2 -g\
-    npm list -g\
-    pm2 list
-16. pm2 start index.js
-17. pm2 startup
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
-18. copy and execute the output and make auto start of an node.js app even on reboot<br>
-pm2 save\
-mongosh\
+### Enter into mongodb by typing below command
+``` bash 
+mongosh
+test> show dbs
+test> exit
+```
+### Check npm packages list
+``` bash
+npm list
+```
+### Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
+### go to short-url-nodejs directory
+``` bash
+cd short-url-nodejs
+npm list -g
+npm install
+npm list -g
+sudo npm i pm2 -g
+pm2 lsit
+pm2 start index.js
+
+```
+### copy and execute the output and make auto start of an node.js app even on reboot<br>
+``` bash
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+pm2 save
+```
+### Enter into mongodb by typing below command
+``` bash
+mongosh
 test> show dbs<br>
 test> use short-url<br>
 short-url> show collections<br>
-exit<br>
+exit
+```
 sudo apt install nginx -y<br>
 sudo systemctl enable nginx<br>
 
