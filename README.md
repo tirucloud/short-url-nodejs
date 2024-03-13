@@ -1,15 +1,15 @@
 #### Install node.js from https://deb.nodesource.com
 #### check node version
-``` node -v ```
+ ```bash node -v ```
 #### check node package manager version
-` npm -v `
+ ```bash npm -v ```
 #### Install mongodb from https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
-```sh sudo systemctl start mongod```
-``` sh sudo systemctl enable mongod ```
-``` sh mongosh ```
-``` sh test> show dbs ```
-``` sh test> exit ```
-``` sh npm list ```
+ ```bash sudo systemctl start mongod```
+```bash sudo systemctl enable mongod ```
+```bash mongosh ```
+```bash test> show dbs ```
+```bash test> exit ```
+```bash npm list ```
 11. Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
 12. go to short-url-nodejs directory
 13. cd short-url-nodejs
