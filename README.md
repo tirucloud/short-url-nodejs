@@ -46,15 +46,17 @@ pm2 save
 ```
 ```bash
 mongosh
-test> show dbs<br>
-test> use short-url<br>
-short-url> show collections<br>
-exit<br>
-sudo apt install nginx -y<br>
-sudo systemctl enable nginx<br>
+test> show dbs
+test> use short-url
+short-url> show collections
+exit
+sudo apt install nginx -y
+sudo systemctl enable nginx
 ```
+```bash
 sudo vi /etc/nginx/sites-available/default
-
+````
+```bash
 server {
        listen 80;
        listen [::]:80;
@@ -71,69 +73,71 @@ location / {
 }
 
 }
+```
+#### Check NGINX config
 
-Check NGINX config
-
+```bash
 sudo nginx -t
-
-Restart NGINX
-
+```
+#### Restart NGINX
+```bash
 sudo nginx -s reload
-
-Add SSL with LetsEncrypt
+````
+#### Add SSL with LetsEncrypt
+```bash
 sudo add-apt-repository ppa:certbot/certbot 
-
+```
+```bash
 sudo apt update 
-
 sudo apt install python3-certbot-nginx 
-
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
-
-Only valid for 90 days, test the renewal process with
-
+```
+#### Only valid for 90 days, test the renewal process with
+```bash
 certbot renew --dry-run
-
+```
+```bash
 sudo systemctl status certbot.timer
-
-Wriet a cron job to perform auto renewal for every 30 days
-
+```
+#### Wriet a cron job to perform auto renewal for every 30 days
+```bash
 sudo vi /etc/cron.d/certbot
-
+```
+```bash
 # /etc/cron.d/certbot: crontab entries for the certbot package
 #
 # Upstream recommends attempting renewal twice a day
 #
-# Eventually, this will be an opportunity to validate certificates
+# entually, this will be an opportunity to validate certificates
 # haven't been revoked, etc.  Renewal will only occur if expiration
 # is within 30 days.
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(3600))' && certbot -q renew
-
+```
+```bash
 crontab -l
 crontab -t
-
-
+```
+```bash
 mongosh
-
+```
+```bash
 test> show dbs
-
+```
 admin       40.00 KiB
 config      72.00 KiB
 local       72.00 KiB
 short-url  136.00 KiB
 
-
+```bash
 test> use short-url
 switched to db short-url
-
 short-url> show collections
-
 short-url> show collections
 urls
 users
-
 short-url> db.users.find()
 [
   {
@@ -152,19 +156,19 @@ short-url> db.urls.find()
 	.........
   }
 ]
+```
+#### Signup Page: http://yourdomain.com:8001/signup
 
-Signup Page: http://yourdomain.com:8001/signup
+#### http://yourdomain.com:8001/login
 
-http://yourdomain.com:8001/login
+#### mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
 
-# mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
+#### Download mongodb compass client tool: https://www.mongodb.com/try/download/compass
 
-# Download mongodb compass client tool: https://www.mongodb.com/try/download/compass
-
-Go to Linux terminal, edit mongo conf file to access mongodb from anaywhere
+#### Go to Linux terminal, edit mongo conf file to access mongodb from anaywhere
+```bash
 sudo vi /etc/mongod.conf
-
-Goto network section 
-
-Replace 127.0.0.1 with 0.0.0.0
+```
+#### Goto network section 
+#### Replace 127.0.0.1 with 0.0.0.0
 
