@@ -31,7 +31,7 @@ sudo apt install nginx -y<br>
 sudo systemctl enable nginx<br>
 
 sudo vi /etc/nginx/sites-available/default
-```
+
 server {
        listen 80;
        listen [::]:80;
