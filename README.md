@@ -1,8 +1,6 @@
 #### Install node.js from https://deb.nodesource.com
 #### check node version
-```bash
-node -v 
-```
+```bash node -v ```
 #### check node package manager version
 ```bash
 npm -v 
