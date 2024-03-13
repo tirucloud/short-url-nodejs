@@ -1,8 +1,8 @@
 #### Install node.js from ![here](https://deb.nodesource.com)
 #### check node version
-``` sh node -v ```
+``` node -v ```
 #### check node package manager version
-``` sh npm -v ```
+``` npm -v ```
 #### Install mongodb from --> ![here](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
 ``` sh sudo systemctl start mongod ```
 ``` sh sudo systemctl enable mongod ```
