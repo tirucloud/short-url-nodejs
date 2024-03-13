@@ -38,9 +38,9 @@ pm2 start index.js
 pm2 startup
 ```
 ```bash
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
 ```
-#### copy and execute the output and make auto start of an node.js app even on reboot<br>
+#### copy and execute the output and make auto start of an node.js app even on reboot
 ```bash
 pm2 save
 ```
