@@ -1,4 +1,4 @@
-# 1. Install node.js from --> https://deb.nodesource.com/
+### 1. Install node.js from --> https://deb.nodesource.com/
 2. check node version --> node -v
 3. check node package manager version --> npm -v
 4. Install mongodb from --> https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
