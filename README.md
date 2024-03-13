@@ -31,8 +31,8 @@ npm list
 ```bash
 cd short-url-nodejs
 npm install
-sudo npm i pm2 -g\
-npm list -g\
+sudo npm i pm2 -g
+npm list -g
 pm2 list
 pm2 start index.js
 pm2 startup
