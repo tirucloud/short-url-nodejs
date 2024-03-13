@@ -1,4 +1,4 @@
-#### Install node.js from ![here](https://deb.nodesource.com/)
+#### Install node.js from ![here](https://deb.nodesource.com)
 #### check node version
 ``` sh node -v ```
 #### check node package manager version
