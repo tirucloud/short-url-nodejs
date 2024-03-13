@@ -126,11 +126,12 @@ mongosh
 ```bash
 test> show dbs
 ```
-admin       40.00 KiB <br>
-config      72.00 KiB <br>
-local       72.00 KiB <br>
-short-url  136.00 KiB <br>
-
+```bash
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+short-url  136.00 KiB
+```
 ```bash
 test> use short-url
 switched to db short-url
