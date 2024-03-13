@@ -1,6 +1,8 @@
 #### Install node.js from https://deb.nodesource.com
 #### check node version
-```bash node -v ```
+```bash 
+node -v
+```
 #### check node package manager version
 ```bash
 npm -v 
@@ -24,26 +26,33 @@ test> exit
 ```bash
 npm list 
 ```
-11. Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
-12. go to short-url-nodejs directory
-13. cd short-url-nodejs
-14. npm install
-15. sudo npm i pm2 -g\
-    npm list -g\
-    pm2 list
-16. pm2 start index.js
-17. pm2 startup
+#### Clone your project from Github --> git clone https://github.com/tirucloud/short-url-nodejs.git
+#### go to short-url-nodejs directory
+```bash
+cd short-url-nodejs
+npm install
+sudo npm i pm2 -g\
+npm list -g\
+pm2 list
+pm2 start index.js
+pm2 startup
+```
+```bash
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu<br>
-18. copy and execute the output and make auto start of an node.js app even on reboot<br>
-pm2 save\
-mongosh\
+```
+#### copy and execute the output and make auto start of an node.js app even on reboot<br>
+```bash
+pm2 save
+```
+```bash
+mongosh
 test> show dbs<br>
 test> use short-url<br>
 short-url> show collections<br>
 exit<br>
 sudo apt install nginx -y<br>
 sudo systemctl enable nginx<br>
-
+```
 sudo vi /etc/nginx/sites-available/default
 
 server {
