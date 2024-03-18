@@ -1,3 +1,4 @@
+## SHORT URL APP
 #### Install node.js from https://deb.nodesource.com
 #### check node version
 ```bash
@@ -92,14 +93,14 @@ sudo apt update
 sudo apt install python3-certbot-nginx 
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
-#### Only valid for 90 days, test the renewal process with
+#### Only valid for 90 days, test the SSL Certificate renewal process with
 ```bash
 certbot renew --dry-run
 ```
 ```bash
 sudo systemctl status certbot.timer
 ```
-#### Wriet a cron job to perform auto renewal for every 30 days
+#### Write a cron job to perform auto renewal of SSL Certificate for every 30 days
 ```bash
 sudo vi /etc/cron.d/certbot
 ```
