@@ -90,7 +90,7 @@ sudo add-apt-repository ppa:certbot/certbot
 ```
 ```bash
 sudo apt update 
-sudo apt install python3-certbot-nginx 
+sudo apt install python3-certbot-nginx -y
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
 #### Only valid for 90 days, test the SSL Certificate renewal process with
